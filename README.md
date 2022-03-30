@@ -164,3 +164,17 @@ python3 main.py --train_data [dataset of supervised learning] --Video --Video_pa
 Our contributions on codes are released under the MIT license. For the codes of the otehr works, refer to their repositories.
 
 The video data should only be used for private/research purposes, and not for any commercial purposes.
+
+
+
+## Syniez customized
+For using RTX 3090, i have to set available CUDA, torch version.
+To make it easier, i used docker to setting environment.
+
+### 1) run dockerfile
+docker build -t "username/container_name:version" .
+### 2) enter in container using my bash file
+bash docker_run.sh
+### 3) make conda environment by using edited depth.yaml file
+conda env create --file depth.taml
+### 4) activate 
