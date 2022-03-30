@@ -176,7 +176,7 @@ To make it easier, i used docker to setting environment.
 ### 2) enter in container using my bash file
 - bash docker_run.sh
 ### 3) make conda environment by using edited depth.yaml file
-- conda env create --file depth.yaml
+- conda env create --file depth_syniez.yaml
 ### 4) activate, update torch & torchvision
 - conda activate depth_1.7
 - export TORCH_CUDA_ARCH_LIST=8.6
