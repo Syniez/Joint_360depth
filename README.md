@@ -165,16 +165,20 @@ Our contributions on codes are released under the MIT license. For the codes of 
 
 The video data should only be used for private/research purposes, and not for any commercial purposes.
 
+-----------------------------------------------------------------------
 
-
-## Syniez customized
+## Syniez customized setup
 For using RTX 3090, i have to set available CUDA, torch version.
 To make it easier, i used docker to setting environment.
 
 ### 1) run dockerfile
-docker build -t "username/container_name:version" .
+- docker build -t "username/container_name:version" .
 ### 2) enter in container using my bash file
-bash docker_run.sh
+- bash docker_run.sh
 ### 3) make conda environment by using edited depth.yaml file
-conda env create --file depth.taml
-### 4) activate 
+- conda env create --file depth.yaml
+### 4) activate, update torch & torchvision
+- conda activate depth_1.7
+- export TORCH_CUDA_ARCH_LIST=8.6
+- conda uninstall pytorch
+- conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia
