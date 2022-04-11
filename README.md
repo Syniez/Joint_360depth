@@ -182,3 +182,8 @@ To make it easier, i used docker to setting environment.
 - export TORCH_CUDA_ARCH_LIST=8.6
 - conda uninstall pytorch
 - conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia
+
+-----------------------------------------------------------------------
+
+For me, in RTX 3090 there is an error about CUDA out of memory with Structure3D dataset. (only use panorama set)
+So, i changed batch size (2 for default -> 1) and it seems like working...
